@@ -42,8 +42,8 @@ print(df_size)
 # step 3: Write a query in Pandas to select a particular set of your data. You can use a mask or with .query(), but we want you to pull out a subset based on any parameter
 
 
-def type_violations(type):
-    filterdata = df['properties.EstTypeDesc'].isin([type])
+def type_violations(Esttype):
+    filterdata = df['properties.EstTypeDesc'].isin([Esttype])
     filtertype = df[filterdata]
     groupFilter = filtertype.groupby(
         filtertype['properties.premise_name']).agg(['count'])
